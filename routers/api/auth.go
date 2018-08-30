@@ -33,7 +33,6 @@ func GetAuth(context *gin.Context) {
 
 		if isExist {
 			token, err := util.GenerateToken(username, password)
-
 			if err != nil {
 				code = e.ERROR_AUTH_TOKEN
 			} else {
